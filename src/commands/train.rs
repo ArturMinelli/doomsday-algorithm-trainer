@@ -16,7 +16,7 @@ impl Train {
         return Train {};
     }
 
-    pub fn run(&self) -> Result<u8, String> {
+    pub fn run(&self) -> Result<u8, Box<dyn std::error::Error>> {
         let result = loop {
             self.clear_output();
 

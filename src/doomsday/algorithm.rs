@@ -6,7 +6,7 @@ use chrono::{Datelike, NaiveDate};
 
 pub struct DoomsdayAlgorithm {}
 impl DoomsdayAlgorithm {
-    pub fn execute(date_str: &str) -> Result<DoomsdayAlgorithmResult, String> {
+    pub fn execute(date_str: &str) -> Result<DoomsdayAlgorithmResult, Box<dyn std::error::Error>> {
         let date = Self::parse_date(date_str);
 
         // Decomposing the date
